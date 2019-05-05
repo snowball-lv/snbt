@@ -1,0 +1,26 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    cinch (2.3.4)
+    cinch-identify (1.7.0)
+      cinch (~> 2.0)
+    concurrent-ruby (1.0.5)
+    i18n (1.0.1)
+      concurrent-ruby (~> 1.0)
+    mini_portile2 (2.3.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
+    unicode (0.4.4.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  cinch
+  cinch-identify
+  i18n
+  nokogiri
+  unicode
+
+BUNDLED WITH
+   1.16.1
