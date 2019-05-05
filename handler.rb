@@ -175,11 +175,13 @@ def devlv_cmd_ping(m, rem)
 end
 
 def devlv_cmd_echo(m, rem)
-    m.reply(rem.strip)
+    if !rem.strip.empty?
+        m.reply(rem.strip)
+    end
 end
 
 def devlv_cmd_version(m, rem)
-    m.reply("1.1.0")
+    m.reply("1.1.0 https://github.com/snowball-lv/snbt")
 end
 
 START_TIME = Time.now.to_i
