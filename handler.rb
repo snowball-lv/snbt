@@ -244,10 +244,13 @@ def process_devlv_cmds(m)
     cmd = nil
     rem = nil
 
-    if mch = /^[!,](#{CMDS})(.*)/.match(msg.strip)
+    if m.events.include?(:private) && mch = /^(#{CMDS})(\s(.*))?$/.match(msg.strip)
         cmd = mch[1]
         rem = mch[2]
-    elsif mch = /^(\w+)\s*[,:]\s*(#{CMDS})(.*)/.match(msg.strip)
+    elsif mch = /^[!,](#{CMDS})(\s(.*))?$/.match(msg.strip)
+        cmd = mch[1]
+        rem = mch[2]
+    elsif mch = /^(\w+)\s*[,:]\s*(#{CMDS})(\s(.*))?$/.match(msg.strip)
         nick = mch[1]
         if nick.downcase == our_nick.downcase
             cmd = mch[2]
