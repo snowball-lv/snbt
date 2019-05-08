@@ -200,7 +200,7 @@ def devlv_cmd_uptime(m, rem)
     if hours % 24 > 0; uptime.push("#{hours % 24}h"); end
 
     days = hours / 24;
-    if days % 365 > 0; uptime.push("#{days % 365}h"); end
+    if days % 365 > 0; uptime.push("#{days % 365}d"); end
 
     years = days / 365;
     if years > 0; uptime.push("#{years}y"); end
